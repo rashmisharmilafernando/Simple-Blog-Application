@@ -75,7 +75,7 @@ function NewBlog(): JSX.Element {
 
         if (blog) {
 
-            axios.put("http://localhost:5000/blog/editpost", body, { headers })
+            axios.put("http://localhost:5000/posts/editpost", body, { headers })
                 .then((r) => {
                     Swal.fire({
                         icon: "success",
@@ -93,7 +93,7 @@ function NewBlog(): JSX.Element {
                 });
         } else {
 
-            axios.post("http://localhost:5000/blog/addpost", body, { headers })
+            axios.post("http://localhost:5000/posts/addpost", body, { headers })
                 .then((r) => {
                     Swal.fire({
                         icon: "success",

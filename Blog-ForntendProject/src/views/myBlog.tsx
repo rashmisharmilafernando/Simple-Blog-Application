@@ -36,7 +36,7 @@ const MyBlogs = (): JSX.Element => {
       'Content-Type': 'application/json',
       'Authorization': ACCESS_TOKEN
     }
-    axios.get("http://localhost:5000/blog/get/my?size=10&page=1", { headers: headers })
+    axios.get("http://localhost:5000/posts/get/my?size=10&page=1", { headers: headers })
       .then(r => {
         console.log(r.data.data);
         setData(r.data.data);
@@ -69,7 +69,7 @@ const MyBlogs = (): JSX.Element => {
           'Authorization': ACCESS_TOKEN
         }
 
-        axios.delete(`http://localhost:5000/blog/${id}`, { headers: headers })
+        axios.delete(`http://localhost:5000/posts/${id}`, { headers: headers })
           .then(r => {
             Swal.fire({
               icon: "success",

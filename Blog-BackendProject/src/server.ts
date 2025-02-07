@@ -20,7 +20,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: "*", // Allow all origins (or use 'http://localhost:3000')
+  origin: "*", 
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization"]
 }));
@@ -62,4 +62,4 @@ app.listen(PORT, async () => {
 });
 
 app.use('/user', UserRoutes)
-app.use('/blog', BlogRoutes)
+app.use('/posts', BlogRoutes)

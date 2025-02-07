@@ -14,7 +14,7 @@ function Home(): JSX.Element {
 
   const[data, setData] = useState<Data[]>([]);
   const fetchData = (): void => {
-      axios.get('http://localhost:5000/blog?size=100&page=1').then(response => {
+      axios.get('http://localhost:5000/posts?size=100&page=1').then(response => {
           setData(response.data.data);
       }).catch(err => {
           console.log(err);
