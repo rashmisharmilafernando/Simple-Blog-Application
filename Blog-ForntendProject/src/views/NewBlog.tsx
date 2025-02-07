@@ -100,6 +100,7 @@ function NewBlog(): JSX.Element {
                         title: "Success!",
                         text: "Blog created successfully!"
                     });
+                    navigate("/home");
                 })
                 .catch((e) => {
                     Swal.fire({
